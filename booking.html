@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Workshop | Skill Pinnacle</title>
+    <meta name="description" content="Schedule a world-class corporate training workshop. Choose your program, select your preferences, and let's design a future-ready team together.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="sticky-header" id="header">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Skill Pinnacle" class="logo-img">
+        </a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="nav-mobile-cta">Book a Workshop</a>
+        </nav>
+        <div class="cta-buttons">
+            <a href="booking.html" class="btn btn-primary">Book a Workshop</a>
+        </div>
+        <button class="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- ====== HERO ====== -->
+        <section class="ct-hero">
+            <div class="ct-blob ct-blob-1"></div>
+            <div class="ct-blob ct-blob-2"></div>
+            <div class="ct-blob ct-blob-3"></div>
+
+            <div class="ct-hero-inner fade-up animate">
+                <div class="ct-pill-badge" style="background: rgba(124, 58, 237, 0.15); border-color: rgba(124, 58, 237, 0.35); color: #c084fc;">
+                    <span class="ct-pill-dot" style="background: #a855f7;"></span>
+                    SCHEDULE A SESSION
+                </div>
+                <h1 class="ct-hero-headline">
+                    Elevate your workforce.<br>
+                    <span class="ct-gradient-word" style="background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Reserve your workshop.</span>
+                </h1>
+                <p class="ct-hero-sub">
+                    Transform your organization with world-class coaching. Select your program, set your preferences, and let's design your future-ready team.
+                </p>
+            </div>
+        </section>
+
+        <!-- ====== MAIN BOOKING SECTION ====== -->
+        <section class="ct-main">
+            <div class="ct-main-inner">
+
+                <!-- LEFT: Info -->
+                <div class="ct-info">
+                    <div class="ct-info-header fade-up animate">
+                        <p class="ct-info-eyebrow" style="color: #8b5cf6;">Why Skill Pinnacle?</p>
+                        <h2 class="ct-info-title">The Gold Standard in Training.</h2>
+                        <p class="ct-info-sub">We don't just deliver workshops; we deliver measurable behavioral shifts. Every session is backed by organizational science and real-world expertise.</p>
+                    </div>
+
+                    <div class="ct-info-card fade-up animate delay-1">
+                        <div class="ct-card-icon purple">👑</div>
+                        <div class="ct-card-body">
+                            <h4>Expert-Led Modules</h4>
+                            <p>All sessions are conducted by certified industry veterans with 15+ years of leadership experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="ct-info-card fade-up animate delay-1">
+                        <div class="ct-card-icon pink">🎯</div>
+                        <div class="ct-card-body">
+                            <h4>Tailored Curriculum</h4>
+                            <p>Every workshop is customized to your specific team challenges. We don't do "off-the-shelf."</p>
+                        </div>
+                    </div>
+
+                    <div class="ct-info-card fade-up animate delay-2">
+                        <div class="ct-card-icon teal">📈</div>
+                        <div class="ct-card-body">
+                            <h4>Measurable ROI</h4>
+                            <p>Track performance metrics pre- and post-workshop with our Skill Pinnacle Insights dashboard.</p>
+                        </div>
+                    </div>
+
+                    <div class="ct-info-card fade-up animate delay-2">
+                        <div class="ct-card-icon amber">🌍</div>
+                        <div class="ct-card-body">
+                            <h4>Global Delivery</h4>
+                            <p>In-person, virtual, or hybrid. We deliver high-impact learning wherever your teams are located.</p>
+                        </div>
+                    </div>
+
+                    <div class="ct-socials fade-up animate delay-3" style="background: #1e1b4b;">
+                        <h4 style="color: rgba(255,255,255,0.6);">Join 150+ Organizations</h4>
+                        <div style="color: white; font-size: 0.9rem; opacity: 0.8;">Trusted by teams at Rolls-Royce, Pfizer, and Deloitte to drive human transformation.</div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Form -->
+                <div class="ct-form-wrap fade-up animate delay-1">
+                    <div class="ct-form-header">
+                        <h3>Request a Consultation</h3>
+                        <p>Fill in the details below and our program coordinators will reach out to schedule your discovery session.</p>
+                    </div>
+
+                    <form class="ct-form" id="bookingForm" action="#" method="POST">
+                        <div class="ct-row">
+                            <div class="ct-field">
+                                <label class="ct-label" for="firstName">First Name</label>
+                                <input id="firstName" type="text" class="ct-input" placeholder="Jane" required>
+                            </div>
+                            <div class="ct-field">
+                                <label class="ct-label" for="lastName">Last Name</label>
+                                <input id="lastName" type="text" class="ct-input" placeholder="Smith" required>
+                            </div>
+                        </div>
+
+                        <div class="ct-field">
+                            <label class="ct-label" for="workEmail">Work Email</label>
+                            <input id="workEmail" type="email" class="ct-input" placeholder="jane@company.com" required>
+                        </div>
+
+                        <div class="ct-row">
+                            <div class="ct-field">
+                                <label class="ct-label" for="company">Organization</label>
+                                <input id="company" type="text" class="ct-input" placeholder="Acme Corp">
+                            </div>
+                            <div class="ct-field">
+                                <label class="ct-label" for="teamSize">Expected Cohort Size</label>
+                                <select id="teamSize" class="ct-select">
+                                    <option value="" disabled selected>Select size</option>
+                                    <option>5–15 (Executive)</option>
+                                    <option>16–50 (Managerial)</option>
+                                    <option>50–200 (Department)</option>
+                                    <option>200+ (Enterprise)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ct-field">
+                            <label class="ct-label">Primary Objective</label>
+                            <div class="ct-program-pills">
+                                <span class="ct-prog-pill" data-val="exec">Leadership</span>
+                                <span class="ct-prog-pill" data-val="team">Communication</span>
+                                <span class="ct-prog-pill" data-val="conflict">Conflict Res</span>
+                                <span class="ct-prog-pill" data-val="wellness">Productivity</span>
+                                <span class="ct-prog-pill" data-val="custom">Custom</span>
+                            </div>
+                        </div>
+
+                        <div class="ct-field">
+                            <label class="ct-label" for="timeline">Target Timeline</label>
+                            <select id="timeline" class="ct-select">
+                                <option value="" disabled selected>Select timeline</option>
+                                <option>Next 30 days</option>
+                                <option>Next 3 months</option>
+                                <option>Next 6 months</option>
+                                <option>Just exploring</option>
+                            </select>
+                        </div>
+
+                        <div class="ct-field">
+                            <label class="ct-label" for="message">Specific Goals / Challenges</label>
+                            <textarea id="message" class="ct-textarea" placeholder="Tell us what you're looking to achieve with this workshop..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="ct-submit" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);">Confirm Request →</button>
+                        <p class="ct-form-note">🔒 Data protected by Skill Pinnacle Global Security Standards.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== FAQ ====== -->
+        <section class="ct-faq-section">
+            <div class="ct-faq-inner">
+                <div class="ct-faq-header fade-up animate">
+                    <p class="ct-faq-eyebrow">Booking FAQ</p>
+                    <h2 class="ct-faq-title">Everything you need to know.</h2>
+                </div>
+                <div class="ct-faq-list fade-up animate delay-1">
+                    <div class="ct-faq-item">
+                        <button class="ct-faq-q">What is the booking process? <span class="ct-faq-icon">+</span></button>
+                        <div class="ct-faq-a">After submitting your request, a program coordinator will reach out within 24 hours to schedule a discovery session. We'll then customize the curriculum and finalize dates and delivery formats.</div>
+                    </div>
+                    <div class="ct-faq-item">
+                        <button class="ct-faq-q">Can we book workshops for multiple locations? <span class="ct-faq-icon">+</span></button>
+                        <div class="ct-faq-a">Yes. We specialize in global rollouts and can deliver synchronized training across multiple offices and timezones, either in-person or virtually.</div>
+                    </div>
+                    <div class="ct-faq-item">
+                        <button class="ct-faq-q">Is there a minimum notice period for booking? <span class="ct-faq-icon">+</span></button>
+                        <div class="ct-faq-a">We generally recommend booking at least 4-6 weeks in advance to allow for proper customization, though we can sometimes accommodate urgent requests within 2 weeks.</div>
+                    </div>
+                    <div class="ct-faq-item">
+                        <button class="ct-faq-q">Do you offer post-workshop support? <span class="ct-faq-icon">+</span></button>
+                        <div class="ct-faq-a">Absolutely. All our workshops include a 3-month sustainment period with follow-up nudges, impact reporting, and access to our digital learning resources.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== NPS CTA ====== -->
+        <section class="nps-cta-layer">
+            <img src="assets/footerbg.png" alt="" class="nps-bg-video">
+            <div class="nps-cta-content text-center fade-up animate">
+                <h2 class="nps-heading">See Skill Pinnacle in Action.</h2>
+                <p class="nps-sub">Experience how our training transforms individuals into high-performing professionals.</p>
+                <div class="nps-actions">
+                    <a href="booking.html" class="btn btn-lemon">Request a Demo</a>
+                    <a href="contact.html" class="btn btn-outline-white">Contact Us <span class="nps-play-icon">&#x25B6;</span></a>
+                </div>
+            </div>
+            <div class="nps-floor-curve"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="max-w footer-grid">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Skill Pinnacle" class="logo-img">
+                </a>
+                <p>Skill Pinnacle is a corporate training and skill development company helping organizations unlock human potential and drive measurable business results.</p>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: info@skillpinnacle.com</p>
+                <p>Phone: +1 (555) 000-0000</p>
+                <p>Address: 123 Business Way, Tech City</p>
+            </div>
+        </div>
+        <div class="footer-bottom max-w">
+            <p>&copy; 2026 Skill Pinnacle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Program pill toggle
+        document.querySelectorAll('.ct-prog-pill').forEach(pill => {
+            pill.addEventListener('click', () => pill.classList.toggle('selected'));
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.ct-faq-item').forEach(item => {
+            item.querySelector('.ct-faq-q').addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.ct-faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        // Form submit feedback
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.ct-submit');
+            btn.textContent = '✓ Request Received!';
+            btn.style.background = 'linear-gradient(135deg, #059669, #34d399)';
+            btn.style.boxShadow = '0 8px 24px rgba(5,150,105,0.4)';
+            setTimeout(() => {
+                btn.textContent = 'Confirm Request →';
+                btn.style.background = '';
+                btn.style.boxShadow = '';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
