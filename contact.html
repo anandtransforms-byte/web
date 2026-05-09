@@ -28,10 +28,10 @@
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
-            <a href="booking.html" class="nav-mobile-cta">Book a Workshop</a>
+            <a href="booking.html" class="nav-mobile-cta">Book a Team Workshop</a>
         </nav>
         <div class="cta-buttons">
-            <a href="booking.html" class="btn btn-primary">Book a Workshop</a>
+            <a href="booking.html" class="btn btn-primary">Book a Team Workshop</a>
         </div>
         <button class="mobile-menu-btn">
             <span></span><span></span><span></span>
@@ -255,6 +255,59 @@
                         <div class="ct-faq-a">Our corporate advisors typically review consultation requests and respond within one business day to discuss your organization's specific professional development needs.</div>
                     </div>
                 </div>
+
+        <!-- JSON-LD Organization & LocalBusiness Schema for GEO & Local SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://skillpinnacle.com/#organization",
+              "name": "SkillPinnacle",
+              "url": "https://skillpinnacle.com",
+              "logo": "https://skillpinnacle.com/assets/logo.png",
+              "description": "SkillPinnacle helps businesses in Kerala and UAE improve leadership, employee communication, workplace collaboration, productivity, and team performance through customized corporate training programs."
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://skillpinnacle.com/#localbusiness-kerala",
+              "name": "SkillPinnacle - Corporate Training Kerala",
+              "image": "https://skillpinnacle.com/assets/about_hero.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Technopark Campus",
+                "addressLocality": "Trivandrum",
+                "addressRegion": "Kerala",
+                "postalCode": "695581",
+                "addressCountry": "IN"
+              },
+              "telephone": "+91 471 123 4567",
+              "priceRange": "$$$",
+              "parentOrganization": {
+                "@id": "https://skillpinnacle.com/#organization"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://skillpinnacle.com/#localbusiness-uae",
+              "name": "SkillPinnacle - Employee Training UAE",
+              "image": "https://skillpinnacle.com/assets/about_hero.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Business Bay",
+                "addressLocality": "Dubai",
+                "addressCountry": "AE"
+              },
+              "telephone": "+971 4 123 4567",
+              "priceRange": "$$$",
+              "parentOrganization": {
+                "@id": "https://skillpinnacle.com/#organization"
+              }
+            }
+          ]
+        }
+        </script>
 
         <!-- JSON-LD FAQ Schema for Answer Engine Optimization (AEO) & SEO -->
         <script type="application/ld+json">

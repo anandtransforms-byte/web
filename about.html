@@ -24,10 +24,10 @@
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
-            <a href="booking.html" class="nav-mobile-cta">Book a Workshop</a>
+            <a href="booking.html" class="nav-mobile-cta">Book a Team Workshop</a>
         </nav>
         <div class="cta-buttons">
-            <a href="booking.html" class="btn btn-primary">Book a Workshop</a>
+            <a href="booking.html" class="btn btn-primary">Book a Team Workshop</a>
         </div>
         <button class="mobile-menu-btn">
             <span></span><span></span><span></span>
@@ -60,7 +60,7 @@
                     </p>
                     <div class="ab-hero-actions">
                         <a href="booking.html" class="ab-btn-primary">Schedule Corporate Consultation</a>
-                        <a href="services.html" class="ab-btn-ghost">Explore Corporate Training Programs →</a>
+                        <a href="services.html" class="ab-btn-ghost">Explore Leadership Programs →</a>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                     <p class="ab-strategy-eyebrow">Why Choose Us</p>
                     <h2 class="ab-strategy-headline">Employee Productivity Training Built for Modern Enterprises.</h2>
                     <p class="ab-strategy-subtext">Our customized training programs deliver measurable business improvement and practical workplace impact for organizations in Kerala and the UAE.</p>
-                    <a href="services.html" class="ab-strategy-cta">Explore Corporate Training Programs →</a>
+                    <a href="services.html" class="ab-strategy-cta">Explore Leadership Programs →</a>
                 </div>
 
                 <div class="ab-strategy-items fade-up animate delay-1">
@@ -338,6 +338,101 @@
                 </div>
             </div>
         </section>
+
+        <!-- JSON-LD Organization & LocalBusiness Schema for GEO & Local SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://skillpinnacle.com/#organization",
+              "name": "SkillPinnacle",
+              "url": "https://skillpinnacle.com",
+              "logo": "https://skillpinnacle.com/assets/logo.png",
+              "description": "SkillPinnacle helps businesses in Kerala and UAE improve leadership, employee communication, workplace collaboration, productivity, and team performance through customized corporate training programs."
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://skillpinnacle.com/#localbusiness-kerala",
+              "name": "SkillPinnacle - Corporate Training Kerala",
+              "image": "https://skillpinnacle.com/assets/about_hero.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Technopark Campus",
+                "addressLocality": "Trivandrum",
+                "addressRegion": "Kerala",
+                "postalCode": "695581",
+                "addressCountry": "IN"
+              },
+              "telephone": "+91 471 123 4567",
+              "priceRange": "$$$",
+              "parentOrganization": {
+                "@id": "https://skillpinnacle.com/#organization"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://skillpinnacle.com/#localbusiness-uae",
+              "name": "SkillPinnacle - Employee Training UAE",
+              "image": "https://skillpinnacle.com/assets/about_hero.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Business Bay",
+                "addressLocality": "Dubai",
+                "addressCountry": "AE"
+              },
+              "telephone": "+971 4 123 4567",
+              "priceRange": "$$$",
+              "parentOrganization": {
+                "@id": "https://skillpinnacle.com/#organization"
+              }
+            }
+          ]
+        }
+        </script>
+
+        <!-- JSON-LD FAQ Schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does SkillPinnacle do?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SkillPinnacle provides premium corporate training, leadership development, and employee productivity programs designed to enhance workplace performance and communication."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide corporate training in Kerala?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we offer comprehensive corporate workshops, team building, and soft skills training across Kerala, including dedicated programs for IT companies in Trivandrum."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer leadership training in UAE?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We deliver customized executive coaching and organizational development programs for enterprises and HR departments operating in Dubai and the wider UAE."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What industries does SkillPinnacle serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our primary clients include IT Companies, Startups, Corporate Organizations, HR Teams, and Educational Institutions seeking measurable workforce development."
+              }
+            }
+          ]
+        }
+        </script>
 
         <!-- ====== NPS CTA ====== -->
         <section class="nps-cta-layer">
