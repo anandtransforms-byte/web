@@ -183,4 +183,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 9. Typewriter effect for brand statements
+    const typewriterElements = document.querySelectorAll('.ab-typewriter-text');
+    if (typewriterElements.length > 0) {
+        const typeText = (el) => {
+            const fullText = el.getAttribute('data-text') || el.innerText;
+            el.innerText = '';
+            el.style.opacity = '1';
+            el.classList.add('typing-active');
+            
+            let index = 0;
+            const speed = 25; // speed of typing (25ms per char)
+            
+            const type = () => {
+                if (index < fullText.length) {
+                    el.innerText += fullText.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                } else {
+                    el.classList.remove('typing-active');
+                    el.classList.add('typing-done');
+                }
+            };
+            type();
+        };
+
+        const typeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeText(entry.target);
+                    typeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        typewriterElements.forEach(el => {
+            if (!el.getAttribute('data-text')) {
+                el.setAttribute('data-text', el.innerText.trim());
+            }
+            el.innerText = '';
+            el.style.opacity = '1';
+            typeObserver.observe(el);
+        });
+    }
 });

@@ -14,7 +14,7 @@
     <!-- HEADER -->
     <header class="sticky-header" id="header">
         <a href="index.html" class="logo">
-            <img src="assets/logo.png" alt="Skill Pinnacle" class="logo-img">
+            <img src="assets/logonew1.png" alt="Skill Pinnacle" class="logo-img">
         </a>
         <nav class="main-nav">
             <a href="index.html">Home</a>
@@ -111,31 +111,37 @@
                         <p>Fill in the details below and our program coordinators will reach out to schedule your discovery session.</p>
                     </div>
 
-                    <form class="ct-form" id="bookingForm" action="#" method="POST">
+                    <form class="ct-form" id="bookingForm" action="https://formspree.io/f/maqkjddo" method="POST">
                         <div class="ct-row">
                             <div class="ct-field">
                                 <label class="ct-label" for="firstName">First Name</label>
-                                <input id="firstName" type="text" class="ct-input" placeholder="Jane" required>
+                                <input id="firstName" name="firstName" type="text" class="ct-input" placeholder="Jane" required>
                             </div>
                             <div class="ct-field">
                                 <label class="ct-label" for="lastName">Last Name</label>
-                                <input id="lastName" type="text" class="ct-input" placeholder="Smith" required>
+                                <input id="lastName" name="lastName" type="text" class="ct-input" placeholder="Smith" required>
                             </div>
                         </div>
 
-                        <div class="ct-field">
-                            <label class="ct-label" for="workEmail">Work Email</label>
-                            <input id="workEmail" type="email" class="ct-input" placeholder="jane@company.com" required>
+                        <div class="ct-row">
+                            <div class="ct-field">
+                                <label class="ct-label" for="workEmail">Work Email</label>
+                                <input id="workEmail" name="email" type="email" class="ct-input" placeholder="jane@company.com" required>
+                            </div>
+                            <div class="ct-field">
+                                <label class="ct-label" for="mobileNumber">Mobile Number</label>
+                                <input id="mobileNumber" name="mobile" type="tel" class="ct-input" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
                         </div>
 
                         <div class="ct-row">
                             <div class="ct-field">
                                 <label class="ct-label" for="company">Organization</label>
-                                <input id="company" type="text" class="ct-input" placeholder="Acme Corp">
+                                <input id="company" name="organization" type="text" class="ct-input" placeholder="Acme Corp">
                             </div>
                             <div class="ct-field">
                                 <label class="ct-label" for="teamSize">Expected Cohort Size</label>
-                                <select id="teamSize" class="ct-select">
+                                <select id="teamSize" name="cohortSize" class="ct-select">
                                     <option value="" disabled selected>Select size</option>
                                     <option>5–15 (Executive)</option>
                                     <option>16–50 (Managerial)</option>
@@ -158,7 +164,7 @@
 
                         <div class="ct-field">
                             <label class="ct-label" for="timeline">Target Timeline</label>
-                            <select id="timeline" class="ct-select">
+                            <select id="timeline" name="timeline" class="ct-select">
                                 <option value="" disabled selected>Select timeline</option>
                                 <option>Next 30 days</option>
                                 <option>Next 3 months</option>
@@ -169,7 +175,7 @@
 
                         <div class="ct-field">
                             <label class="ct-label" for="message">Specific Goals / Challenges</label>
-                            <textarea id="message" class="ct-textarea" placeholder="Tell us what you're looking to achieve with this workshop..." required></textarea>
+                            <textarea id="message" name="message" class="ct-textarea" placeholder="Tell us what you're looking to achieve with this workshop..." required></textarea>
                         </div>
 
                         <button type="submit" class="ct-submit" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);">Confirm Request →</button>
@@ -228,7 +234,7 @@
         <div class="max-w footer-grid">
             <div class="footer-col brand-col">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="Skill Pinnacle" class="logo-img">
+                    <img src="assets/logonew1.png" alt="Skill Pinnacle" class="logo-img">
                 </a>
                 <p>Skill Pinnacle is a corporate training and skill development company helping organizations unlock human potential and drive measurable business results.</p>
                 <div class="social-links">
@@ -246,9 +252,9 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <p>Email: info@skillpinnacle.com</p>
-                <p>Phone: +1 (555) 000-0000</p>
-                <p>Address: 123 Business Way, Tech City</p>
+                <p>Email: skillpinnacleofficial@gmail.com</p>
+                <p>Phone: +91 7356510816</p>
+                <p>Address: Choozhampala, Mukkola, Trivandrum - 43</p>
             </div>
         </div>
         <div class="footer-bottom max-w">
@@ -272,18 +278,68 @@
             });
         });
 
-        // Form submit feedback
+        // Form submit feedback with Formspree Integration
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = this.querySelector('.ct-submit');
-            btn.textContent = '✓ Request Received!';
-            btn.style.background = 'linear-gradient(135deg, #059669, #34d399)';
-            btn.style.boxShadow = '0 8px 24px rgba(5,150,105,0.4)';
-            setTimeout(() => {
-                btn.textContent = 'Confirm Request →';
-                btn.style.background = '';
-                btn.style.boxShadow = '';
-            }, 3000);
+            
+            // Gather selected objective pills
+            const selectedPills = [];
+            document.querySelectorAll('.ct-prog-pill.selected').forEach(pill => {
+                selectedPills.push(pill.textContent.trim());
+            });
+            
+            const data = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('workEmail').value,
+                mobile: document.getElementById('mobileNumber').value,
+                organization: document.getElementById('company').value,
+                cohortSize: document.getElementById('teamSize').value,
+                objectives: selectedPills.join(', '),
+                timeline: document.getElementById('timeline').value,
+                goals: document.getElementById('message').value
+            };
+            
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            
+            fetch('https://formspree.io/f/maqkjddo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    btn.textContent = '✓ Request Received!';
+                    btn.style.background = 'linear-gradient(135deg, #059669, #34d399)';
+                    btn.style.boxShadow = '0 8px 24px rgba(5,150,105,0.4)';
+                    this.reset();
+                    document.querySelectorAll('.ct-prog-pill').forEach(pill => pill.classList.remove('selected'));
+                } else {
+                    btn.textContent = 'Submission Failed';
+                    btn.style.background = 'linear-gradient(135deg, #dc2626, #ef4444)';
+                }
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.textContent = 'Confirm Request →';
+                    btn.style.background = '';
+                    btn.style.boxShadow = '';
+                }, 4000);
+            })
+            .catch(error => {
+                btn.textContent = 'Error Sending';
+                btn.style.background = 'linear-gradient(135deg, #dc2626, #ef4444)';
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.textContent = 'Confirm Request →';
+                    btn.style.background = '';
+                    btn.style.boxShadow = '';
+                }, 4000);
+            });
         });
     </script>
 </body>
