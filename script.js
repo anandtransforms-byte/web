@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 8. Mobile Menu Logic
     const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.main-nav');
+    const nav = document.querySelector('.mobile-nav');
     const stickyHeader = document.querySelector('.sticky-header');
 
     function closeMenu() {
