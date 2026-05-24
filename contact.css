@@ -208,91 +208,12 @@
     font-size: 0.78rem; color: #94a3b8; text-align: center; line-height: 1.5;
 }
 
-/* ---- MAP / OFFICES SECTION ---- */
-.ct-offices-section { background: #05050f; padding: 100px 5%; }
-.ct-offices-inner { max-width: 1200px; margin: 0 auto; }
-.ct-offices-header { text-align: center; margin-bottom: 60px; }
-.ct-offices-eyebrow {
-    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
-    text-transform: uppercase; color: #fb7185; margin-bottom: 16px;
-}
-.ct-offices-title {
-    font-size: clamp(2rem, 3vw, 3rem); font-weight: 800;
-    color: white; letter-spacing: -0.03em;
-}
-
-.ct-offices-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-.ct-office-card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px; padding: 36px;
-    transition: all 0.35s cubic-bezier(0.165,0.84,0.44,1);
-    position: relative; overflow: hidden;
-}
-.ct-office-card::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(244,63,94,0.08), rgba(192,132,252,0.05));
-    opacity: 0; transition: opacity 0.35s;
-}
-.ct-office-card:hover { transform: translateY(-6px); border-color: rgba(244,63,94,0.25); }
-.ct-office-card:hover::before { opacity: 1; }
-.ct-office-flag { font-size: 2.2rem; margin-bottom: 16px; display: block; }
-.ct-office-city {
-    font-size: 1.2rem; font-weight: 800; color: white; margin-bottom: 8px;
-}
-.ct-office-address { font-size: 0.9rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 20px; }
-.ct-office-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
-    text-transform: uppercase; color: #fb7185;
-    background: rgba(244,63,94,0.12); padding: 5px 12px; border-radius: 50px;
-}
-.ct-office-badge.hq { color: #c084fc; background: rgba(192,132,252,0.12); }
-
-/* ---- FAQ SECTION ---- */
-.ct-faq-section { background: var(--bg-surface); padding: 100px 5%; }
-.ct-faq-inner { max-width: 800px; margin: 0 auto; }
-.ct-faq-header { text-align: center; margin-bottom: 60px; }
-.ct-faq-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #f43f5e; margin-bottom: 16px; }
-.ct-faq-title { font-size: clamp(2rem,3vw,3rem); font-weight: 800; color: var(--text-main); letter-spacing: -0.03em; }
-
-.ct-faq-list { display: flex; flex-direction: column; gap: 12px; }
-.ct-faq-item {
-    background: var(--bg-card); border-radius: 16px; border: 1px solid var(--border-color);
-    overflow: hidden; transition: box-shadow 0.3s;
-}
-.ct-faq-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
-.ct-faq-q {
-    width: 100%; padding: 22px 28px;
-    display: flex; justify-content: space-between; align-items: center;
-    background: none; border: none; cursor: pointer;
-    font-family: inherit; font-size: 1rem; font-weight: 700; color: var(--text-main);
-    text-align: left; transition: color 0.3s;
-}
-.ct-faq-q:hover { color: #f43f5e; }
-.ct-faq-icon {
-    width: 28px; height: 28px; border-radius: 50%;
-    background: #f8fafc; border: 1px solid #e2e8f0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; flex-shrink: 0; transition: all 0.35s;
-    color: #64748b;
-}
-.ct-faq-item.open .ct-faq-icon { background: #f43f5e; color: white; border-color: #f43f5e; transform: rotate(45deg); }
-.ct-faq-a {
-    max-height: 0; overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.165,0.84,0.44,1), padding 0.3s;
-    font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;
-    padding: 0 28px;
-}
-.ct-faq-item.open .ct-faq-a { max-height: 200px; padding: 0 28px 24px; }
-
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {
     .ct-main-inner { grid-template-columns: 1fr; }
-    .ct-offices-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
     .ct-hero-headline { font-size: 2.8rem; }
     .ct-form-wrap { padding: 32px 24px; }
     .ct-row { grid-template-columns: 1fr; }
-    .ct-offices-grid { grid-template-columns: 1fr; }
 }

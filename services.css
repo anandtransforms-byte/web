@@ -186,37 +186,6 @@
 .bento-grad-2 { background: linear-gradient(135deg, #064e3b, #047857); }
 .bento-grad-3 { background: linear-gradient(135deg, #4c0519, #be123c); }
 
-/* ---- ADVANCED PROGRAMS ---- */
-.sv-advanced-section {
-    background: #05050f; padding: 120px 5%;
-    position: relative; overflow: hidden;
-}
-.sv-advanced-section::after {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(124,58,237,0.15), transparent 50%);
-    pointer-events: none;
-}
-.sv-advanced-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
-.sv-advanced-header { text-align: center; margin-bottom: 60px; }
-.sv-advanced-header .sv-eyebrow { color: #a78bfa; }
-.sv-advanced-header .sv-section-title { color: white; }
-
-.sv-mini-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;
-}
-.sv-mini-card {
-    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px; padding: 28px;
-    transition: all 0.3s ease;
-    display: flex; flex-direction: column; gap: 12px;
-}
-.sv-mini-card:hover {
-    background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);
-    transform: translateY(-4px);
-}
-.sv-mini-icon { font-size: 1.8rem; }
-.sv-mini-card h4 { font-size: 1.1rem; font-weight: 700; color: white; margin: 0; }
-.sv-mini-card p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin: 0; }
 
 /* ---- DELIVERY METHODS ---- */
 .sv-delivery-section { background: var(--bg-body); padding: 100px 5%; }

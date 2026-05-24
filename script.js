@@ -164,9 +164,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 8. Mobile Menu Logic
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.main-nav');
-    
+    const stickyHeader = document.querySelector('.sticky-header');
+
+    function closeMenu() {
+        if (nav) nav.classList.remove('active');
+        if (mobileBtn) mobileBtn.classList.remove('active');
+        const lines = mobileBtn ? mobileBtn.querySelectorAll('span') : [];
+        if (lines.length) {
+            lines[0].style.transform = 'none';
+            lines[1].style.opacity = '1';
+            lines[2].style.transform = 'none';
+        }
+    }
+
     if (mobileBtn && nav) {
-        mobileBtn.addEventListener('click', () => {
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const isActive = nav.classList.toggle('active');
             mobileBtn.classList.toggle('active');
             
@@ -180,6 +193,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 lines[0].style.transform = 'none';
                 lines[1].style.opacity = '1';
                 lines[2].style.transform = 'none';
+            }
+        });
+
+        // Close menu when a nav link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        // Close menu when clicking outside the header
+        document.addEventListener('click', (e) => {
+            if (stickyHeader && !stickyHeader.contains(e.target)) {
+                closeMenu();
             }
         });
     }
@@ -227,4 +254,60 @@ document.addEventListener('DOMContentLoaded', () => {
             typeObserver.observe(el);
         });
     }
+
+    // 10. 3D Interactive Tilt Animation for Pillar Cards
+    const pillarCards = document.querySelectorAll('.pillar-card');
+    pillarCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((centerY - y) / centerY) * 12; // Max 12 degrees tilt
+            const rotateY = ((x - centerX) / centerX) * 12; // Max 12 degrees tilt
+            
+            card.style.transition = 'transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+            card.style.boxShadow = '0 30px 60px rgba(79, 70, 229, 0.1), 0 4px 16px rgba(79, 70, 229, 0.04)';
+            card.style.borderColor = 'rgba(79, 70, 229, 0.25)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            card.style.boxShadow = '0 10px 30px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02)';
+            card.style.borderColor = 'rgba(226, 232, 240, 0.8)';
+        });
+    });
+
+    // 11. 3D Interactive Tilt Animation for Philosophy Cards (Women's Series)
+    const philosophyCards = document.querySelectorAll('.philosophy-card');
+    philosophyCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = ((centerY - y) / centerY) * 12; // Max 12 degrees tilt
+            const rotateY = ((x - centerX) / centerX) * 12; // Max 12 degrees tilt
+            
+            card.style.transition = 'transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease';
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+            card.style.boxShadow = '0 30px 60px rgba(212, 175, 55, 0.1), 0 4px 16px rgba(212, 175, 55, 0.04)';
+            card.style.borderColor = 'rgba(212, 175, 55, 0.3)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            card.style.boxShadow = '0 10px 30px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02)';
+            card.style.borderColor = 'rgba(226, 232, 240, 0.8)';
+        });
+    });
 });
