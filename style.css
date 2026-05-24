@@ -34,7 +34,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     background: var(--bg-body);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 a { text-decoration: none; color: inherit; }
 .max-w { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 5%; }
@@ -1752,7 +1752,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 1024px) {
-    .sticky-header { padding: 16px 5%; justify-content: space-between; align-items: center; }
+    .sticky-header { width: 100vw; padding: 16px 5%; justify-content: space-between; align-items: center; }
     
     .mobile-menu-btn { display: block; order: 2; }
     .cta-buttons { display: none; } 
